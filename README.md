@@ -9,7 +9,7 @@
 - has_many :messages
 - has_many :groups, through: :groups_users
 
-##groupsテーブル
+## groupsテーブル
 | Column | Type | Options |
 |:------:|:----:|:-------:|
 |group_name|string|null :false|
@@ -17,7 +17,7 @@
 - has_many :users, through: :groups_users
 - belongs_to :message
 
-##groups_usersテーブル
+## groups_usersテーブル
 | Column | Type | Options |
 |:------:|:----:|:-------:|
 |user_id|integer|null :false, foreign_key: true|
