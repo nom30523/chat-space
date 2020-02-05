@@ -15,7 +15,7 @@
 |group_name|string|null :false|
 ### Association
 - has_many :users, through: :groups_users
-- belongs_to :message
+- has_many :messages
 
 ## groups_usersテーブル
 | Column | Type | Options |
