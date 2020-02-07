@@ -1,0 +1,101 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  background-color: $mainWhiteColor;
+  float: left;
+  .main-header {
+    height: 100px;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    &__left-box {
+      margin-top: 35px;
+      &__group-name {
+        color: $chatMainFontColor;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &__menber-list {
+        color: $chatMainSubFontColor;
+        font-size: 12px;
+        display: flex;
+      }
+    }
+    &__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      color :$mainBlueColor;
+      font-size: 16px;
+      border: 1px solid $mainBlueColor;
+      position: absolute;
+      right: 40px;
+    }
+  }
+  .messages {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px 46px 40px;
+    overflow: scroll;
+    .message {
+      padding-bottom: 46px;
+      &__upper {
+        display: flex;
+        margin-bottom: 12px;
+        &__user-name {
+          font-weight: bold;
+          color: $chatMainFontColor;
+          font-size: 16px;
+        }
+        &__date {
+          color: $chatMainSubFontColor;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__text {
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+  }
+  .form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+    .edit-message {
+      display: flex;
+      .edit-box {
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          border-style: none;
+          padding: 0 10px 0 10px;
+        }
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 22px;
+          cursor: pointer;
+          .edit-box__image__file {
+            display: none;
+          }
+        }
+      }
+      .send-btn {
+        height: 50px;
+        width: 100px;
+        padding: 0 30px;
+        margin-left: 15px;
+        cursor: pointer;
+        color: $mainWhiteColor;
+        background-color: $mainBlueColor;
+      }
+    }
+  }
+}
