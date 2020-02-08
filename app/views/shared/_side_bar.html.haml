@@ -1,0 +1,43 @@
+.chat-side
+  .side-header
+    .side-header__items
+      %p.side-header__items__user-name<
+        のむら
+      %ul.side-header__items__menu
+        %li.side-header__items__menu__new-group
+          = link_to "#" do
+            =icon('fas', 'edit')
+        %li.side-header__items__menu__edit-user
+          = link_to "#" do
+            =icon('fas', 'cog')
+  .groups
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        A-ROOM
+      %p.group__first-message<
+        こんにちは
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        B-ROOM
+      %p.group__first-message<
+        おはようございます
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        B-ROOM
+      %p.group__first-message<
+        おはようございます
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        B-ROOM
+      %p.group__first-message<
+        おはようございます
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        B-ROOM
+      %p.group__first-message<
+        おはようございます
+    = link_to "#", class:"group" do
+      %p.group__group-name<
+        B-ROOM
+      %p.group__first-message<
+        おはようございます
