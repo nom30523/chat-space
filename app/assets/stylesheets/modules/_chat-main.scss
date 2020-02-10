@@ -19,6 +19,9 @@
         color: $chatMainSubFontColor;
         font-size: 12px;
         display: flex;
+        li {
+          margin-right: 7px;
+        }
       }
     }
     &__edit-btn {

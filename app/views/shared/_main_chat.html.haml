@@ -2,44 +2,22 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__group-name<
-        A-ROOM
+        = @group.name
       %ul.main-header__left-box__menber-list
         Member：
-        %li.main-header__left-box__menber-list__menber<
-          のむら
-    = link_to "#" do
+        - @groups.each do |group|
+          %li.main-header__left-box__menber-list__menber<
+            = group.name
+    = link_to edit_group_path(@group) do
       .main-header__edit-btn<
         Edit
   .messages
-    .message
-      .message__upper
-        %p.message__upper__user-name<
-          のむら
-        %p.message__upper__date<
-          2020/02/07(Fri) 15:20:12
-      %p.message__text<
-        こんにちは
-    .message
-      .message__upper
-        %p.message__upper__user-name<
-          のむら
-        %p.message__upper__date<
-          2020/02/07(Fri) 15:20:12
-      %p.message__text<
-        こんにちは
-    .message
-      .message__upper
-        %p.message__upper__user-name<
-          のむら
-        %p.message__upper__date<
-          2020/02/07(Fri) 15:20:12
-      %p.message__text<
-        こんにちは
+    = render @messages      
   .form
-    %form.edit-message
+    = form_for [@group, @message], html: {class: 'edit-message'} do |f|
       .edit-box
-        %input.edit-box__text{ placeholder: "type a message", type: :text }
-        %label.edit-box__image{ for: "message-image"}
-          =icon('far', 'image')
-          %input.edit-box__image__file#message-image{type: :file}
-      %input.send-btn{ type: :submit, value: "Send"}
+        = f.text_field :body, class: "edit-box__text", placeholder: "type a message"
+        = f.label :image, class: 'edit-box__image' do
+          = icon('far', 'image')
+          = f.file_field :image, class: 'edit-box__image__file'
+      = f.submit 'Send', class: 'send-btn'
