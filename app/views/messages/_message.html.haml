@@ -1,5 +1,5 @@
 - if message.image.present?
-  .message
+  .message{data: {message: {id: message.id}}}
     .message__upper
       %p.message__upper__user-name<
         = message.user.name
@@ -10,7 +10,7 @@
       %br
       = image_tag message.image.url
 - else
-  .message
+  .message{data: {message: {id: message.id}}}
     .message__upper
       %p.message__upper__user-name<
         = message.user.name
